@@ -46,3 +46,10 @@ app.listen(PORT, () => {
   console.log(`Comprite API running at http://localhost:${PORT}`);
   console.log(`Health check: http://localhost:${PORT}/api/health`);
 });
+
+app.get("/", (req, res) => {
+  res.json({
+    status: "OK",
+    message: "Payroll API is running 🚀"
+  });
+});
